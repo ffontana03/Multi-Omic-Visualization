@@ -22,19 +22,6 @@ The pipeline operates in a circular workflow:
 2.  **R (Computation):** Reads `_scaled.csv` files, performs computationally intensive integration (MOFA/SNF), and exports results (Factors/Weights/Fused Matrix).
 3.  **Python (Phase 2):** Loads the R outputs to perform clustering, survival analysis, biological characterization, and visualization.
 
-```mermaid
-graph TD
-    A[Raw Data] -->|Load & Clean| B(multi_omic_data_visualization.py)
-    B -->|Export Scaled CSVs| C{Intermediate Data}
-    C -->|Input| D[mofa.R]
-    C -->|Input| E[SNF_script.R]
-    D -->|Export Factors & Weights| F[MOFA CSVs]
-    E -->|Export Fused Matrix| G[SNF CSV]
-    F -->|Import| B
-    G -->|Import| B
-    B --> H[Final Visualization & Survival Analysis]
-````
-
 -----
 
 ## 🛠️ Prerequisites
