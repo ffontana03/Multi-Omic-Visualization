@@ -105,6 +105,7 @@ If you wish to re-calculate the MOFA or SNF models using your own parameters:
   * **Patient Similarity:** Heatmaps of the fused similarity network.
   * **Spectral Clustering:** Identification of patient subtypes based on network topology.
   * **UMAP/t-SNE:** 2D projection of the fused network.
+  * **Biological Interpretation:** SHAP values identifying molecular drivers (genes/proteins) for each cluster.
 
 ### 3\. Clinical Validation
 
